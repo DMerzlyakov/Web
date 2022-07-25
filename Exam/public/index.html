@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <title>React App</title>
+  </head>
+  <body>
+  <input id="num" type="text" value="" placeholder="Введите год рождения" />
+  <button id="btn">жми</button>
+  <p id="result"></p>
+  </body>
+
+<script>
+
+  var elem = document.getElementById("num");
+  var elem1 = document.getElementById("btn");
+  this.addEventListener("click", func);
+
+  function func() {
+    var year = elem.value;
+    var date = new Date();
+    var yearNow = date.getFullYear();
+    var p = document.getElementById("result");
+    p.innerHTML = yearNow - year;
+  }
+</script>
+</html>

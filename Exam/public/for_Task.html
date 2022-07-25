@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+Абзац <p class="" id ="" href="" >
+Инпут <input class="" id="" placeholder="" type="">
+Ссылка <a href="" id="" class=""></a>
+Кнопка <button id="" class=""
+<img src="images/smile.jpg" id="img" style="height:30px;">
+<img  id="task" style="height:50px;">
+Чекбокс <input id="text" type="checkbox" checked="">
+Радио кнопка <input type="radio" name="raz" value="html">html
+                 <input type="radio" name="raz" value="css">css
+
+Нумерованый список <
+        ol>
+    <li>Текст1</li>
+     </ol>
+
+
+<input type="checkbox" value="text-decoration:line-through;">перечеркнуть
+<input type="checkbox" value="font-weight:bold;">сделать жирным
+<input type="checkbox" value="color:red">сделать красным
+p.style.cssText
+
+Маркированный список
+    <ul>
+        <li></li>
+    </ul>
+
+
+Таблица
+<table>
+    <tr>
+        <td>25</td>
+        <td>11</td>
+        <td>8</td>
+    </tr>
+    <tr>
+        <td>54</td>
+        <td>13</td>
+        <td>22</td>
+    </tr>
+    <tr>
+        <td>15</td>
+        <td>23</td>
+        <td>6</td>
+    </tr>
+</table>
+
+
+<select name="country" id="country">
+    <option value="aus">Австралия</option>
+    <option value="jap">Япония</option>
+    <option value="sar">ЮАР</option>
+</select>
+
+<select name="cities" id="cities"></select>
+
+</body>
+
+
+
+<script>
+
+
+    keyup - клавиша отпущена
+    Для классификации
+    elems[i].addEventListener('click', function () {
+        this.classList.add('active');
+    });
+
+    this.parentNode.style.display = 'none'; - чтобы закрыть весь div
+
+    elem.addEventListener('blur', func); - при потери фокуса
+    elem.addEventListener('click', func); - при потери фокуса
+    elem.addEventListener('focus', func); - при потери фокуса
+
+    elems[i].value
+    elems[i].innerHTML
+
+    elem[i].addEventListener('change', func); - для чекбокса
+
+    p.style.color = 'green'
+
+    arr.reverse() - Перевернуть список
+
+    new Date()
+    date.getFullYear();
+    date.getDay();
+
+    input.style.display = "none"; - для скрития; inline - для отображения
+
+    elems[i].innerHTML.slice(0, 10) - обрезать текст
+
+    Палиндром
+    var arr = str.split('');
+    var arr2 = str.split('').reverse();
+    for(var i = 0; i < arr.length; i++) {
+        if(arr[i]!== arr2[i]) {
+            alert('это слово не палиндром');
+            return;
+        }
+    }
+    alert('это слово палиндром');
+
+
+    Делаем первую букву заглавной
+    function uswords(str) {
+        var arr = str.split(' ');
+        for (var i = 0; i < arr.length; i++) {
+            arr[i] = arr[i].split('');
+            arr[i][0] = arr[i][0].toUpperCase();
+            arr[i] = arr[i].join('');
+        }
+        str = arr.join(' ');
+        return str;
+    }
+
+    картинки
+    this.height = this.height * 2;
+
+    Для сброса
+    this.removeEventListener('click', func);
+    this.addEventListener('click', reback);
+
+    Выбор по классу
+    var inp = document.querySelector('input');
+
+
+    var elems = document.getElementsByTagName('p');
+
+
+    function func() {
+        var sum = 0;
+        var str = elem.value;
+        var arr = str.split('');
+        for (var i = 0; i < arr.length; i++) {
+            sum += +arr[i];
+        }
+        var newElem = document.getElementById('result');
+        newElem.innerHTML = sum;
+    }
+
+    Вызов функции при запуске
+    <body onLoad="start()">
+    <input type="text" value="2" id="result">
+    </body>
+
+    Таймер
+    function start() {
+        window.setInterval(timer, 1000);
+    }
+
+    Случайная строка
+    arr[getRandom(0, arr.length)]
+    function getRandom(min, max) {
+        return Math.floor(Math.random() * max - min + 1) + min;
+    }
+
+    Сортировака
+    arr2.sort(sortArr);
+
+    function sortArr(a, b){
+        return b - a
+    }
+
+
+   var input = document.getElementById('task');
+    function func() {
+        window.funcId = window.setInterval(go, 500);
+    }
+
+    function go() {
+        if (parseInt(input.value) > 0) {
+            input.value = parseInt(input.value) -1;
+        }
+        if(parseInt(input.value) == 0) {
+            stop();
+        }
+    }
+
+    function stop() {
+        window.clearInterval(window.funcId);
+    }
+
+    Добавляем li
+    item = document.createElement('li');
+    item.innerHTML = arr[i];
+    list.appendChild(item);
+
+    По Enter добавляем
+    var inp = document.querySelector('input');
+    var parag = document.querySelector('p');
+    inp.addEventListener('keypress', func);
+
+    function func(event) {
+        if (event.which == 13) {
+            parag.innerHTML += inp.value + ',';
+            inp.value = '';
+        }
+    }
+
+    Цвет и сумма
+    window.onload = function () {
+        var elems = document.querySelectorAll('td');
+        for (var i = 0; i < elems.length; i++) {
+            elems[i].addEventListener('click', function () {
+                this.classList.add('active');
+            });
+        }
+
+        document.querySelector('#go').addEventListener('click', function () {
+            var elems = document.querySelectorAll('.active');
+            var sum = 0;
+            for (var i = 0; i < elems.length; i++) {
+                sum += Number(elems[i].innerHTML);
+            }		var p = document.createElement('p');
+            p.innerHTML = "Сумма активных ячеек: " + sum;
+            document.body.appendChild(p);
+        });
+
+        document.querySelector('#clear').addEventListener('click', function () {
+            var elems = document.querySelectorAll('td');
+            for (var i = 0; i < elems.length; i++) {
+                elems[i].classList = [];
+            }
+        });
+    }
+
+    Инпут в таблице
+   window.onload = function () {
+    var tdelements = document.querySelectorAll('td');
+    for (var i = 0; i < tdelements.length; i++) {
+        tdelements[i].addEventListener('click', function () {
+            var val = this.innerHTML;
+            this.style.display = "none";
+            var inp = document.createElement('input');
+            inp.value = val;
+            inp.addEventListener('change', function () {
+                this.previousElementSibling.innerHTML = this.value;
+                this.previousElementSibling.style.display = "";
+                this.parentNode.removeChild(this);
+            });
+            this.parentNode.insertBefore(inp, this.nextSibling);
+        });
+    }
+    }
+
+
+    <div id="calendar">
+        <select id="month">
+            <option value="0">Январь</option>
+            <option value="1">Февраль</option>
+            <option value="2">Март</option>
+            <option value="3">Апрель</option>
+            <option value="4">Май</option>
+            <option value="5">Июнь</option>
+            <option value="6">Июль</option>
+            <option value="7">Август</option>
+            <option value="8">Сентябрь</option>
+            <option value="9">Октябрь</option>
+            <option value="10">Ноябрь</option>
+            <option value="11">Декабрь</option>
+        </select>
+        <select id="year"></select>
+        <select id="date"></select>
+    </div>
+
+    var yr;
+    function Calendar(year, month) {
+        var Dlast = 32 - new Date(year,month, 32).getDate(),
+            D = new Date(year,month,Dlast),
+            gen = function(item, id) {
+
+                for (var i = item; i >= 0; i--) {
+                    option = document.createElement('option');
+                    document.createElement('option');
+                    option.textContent = i;
+                    id.appendChild(option);
+                }
+            },
+            m = document.querySelector('option[value="' + month + '"]'), option;
+        if (document.querySelector('#year').length == 0) {
+            gen(D.getFullYear(), y);
+        }
+
+        date.innerHTML='';
+        gen(Dlast, date);
+        m.selected = true;	yr = year;
+
+        Calendar(new Date().getFullYear(),new Date().getMonth())
+        calendar.addEventListener('change', function(event) {
+            var target = event.target;
+            while (target != calendar) {
+                if (target.tagName == 'SELECT') {
+                    switch(target.getAttribute('id')) {
+                        case('month'):
+                            Calendar(yr, target.value)
+                            break;
+                        case('y'):
+                            Calendar(target.value,0)
+                            break;
+                    }
+                    return;
+                }
+                target = target.parentNode;
+            }
+        }
+</script>
+</html>
